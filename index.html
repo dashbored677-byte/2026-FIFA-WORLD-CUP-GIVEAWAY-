@@ -528,7 +528,20 @@ window.addEventListener('load', () => {
         }
 
         function triggerWhatsAppBroadcast() {
-            const rawMessage = `⚽ ATTENTION! I just registered to claim my Free All-Match Pass for the 2026 FIFA World Cup! 🏆 The campaign portal is live. Share with your groups or friends to unlock your multi-stadium validation pass immediately down below! 👇\n\n${currentUser.referralLink}`;
+            const rawMessage = `FIFA world cup is giving out free tickets to the 2026 FIFA world cup football to fans
+
+We're giving football fans an opportunity to enter for a chance to receive FREE 2026 FIFA World Cup tickets through our fan giveaway campaign.
+
+🎟️ Chance to win free tickets
+🌎 Open to football fans
+⚡ Fast registration
+📢 Limited-time entry period
+
+Don't miss your chance to be part of football history!
+
+👇 Click the link below to register and learn more:
+
+🔗 \n\n${currentUser.referralLink}`;
             const message = encodeURIComponent(rawMessage);
             const redirectUrl = `https://api.whatsapp.com/send?text=${message}`;
             
