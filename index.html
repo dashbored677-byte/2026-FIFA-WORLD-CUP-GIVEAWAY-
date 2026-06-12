@@ -36,11 +36,49 @@
             }
         }
     </script>
+    <script>
+// Disable right-click
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Disable common shortcut keys
+document.addEventListener('keydown', function(e) {
+
+    // Ctrl+U (View Source)
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+    }
+
+    // Ctrl+S (Save Page)
+    if (e.ctrlKey && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+    }
+
+    // Ctrl+C (Copy)
+    if (e.ctrlKey && e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+    }
+
+    // Ctrl+A (Select All)
+    if (e.ctrlKey && e.key.toLowerCase() === 'a') {
+        e.preventDefault();
+    }
+
+    // F12 (Developer Tools)
+    if (e.key === 'F12') {
+        e.preventDefault();
+    }
+
+});
+</script>
     
     <style>
         body {
             background: radial-gradient(circle at top, #142811 0%, #070B06 100%);
             color: #F8FAFC;
+            -webkit-user-select:none;
+              -moz-user-select:none;
+            -ms-user-select:none;
+              user-select:none;
         }
         
         .glass {
