@@ -350,6 +350,15 @@
     </footer>
 
     <script>
+window.addEventListener('load', () => {
+    document.querySelectorAll('img').forEach(img => {
+        img.loading = 'lazy';
+        img.decoding = 'async';
+    });
+});
+</script>
+
+    <script>
         const ViralScript = {
             appName: "WorldCup2026Giveaway_WA",
             targetShares: 10,
