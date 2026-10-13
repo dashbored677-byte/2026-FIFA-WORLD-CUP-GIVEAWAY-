@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101827" />
+  <meta name="description" content="Create your character, build your future, earn virtual money, explore the city and live your story in Life in Akwa Ibom." />
+  <title>Life in Akwa Ibom — Your life. Your choices.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="Life in Akwa Ibom home">
+        <span class="brand-mark">LA<span>✦</span></span>
+        <span class="brand-copy"><strong>LIFE IN</strong><b>AKWA IBOM</b><small>LIVE YOUR STORY</small></span>
+      </a>
+      <div class="sidebar-label">YOUR WORLD</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">◈</span> Overview</button>
+        <button class="nav-item" data-page="city"><span class="nav-icon">⌖</span> Explore the city <span class="nav-count">4</span></button>
+        <button class="nav-item" data-page="jobs"><span class="nav-icon">▣</span> Jobs & careers</button>
+        <button class="nav-item" data-page="business"><span class="nav-icon">▤</span> My businesses</button>
+        <button class="nav-item" data-page="homebase"><span class="nav-icon">⌂</span> Home & property</button>
+        <button class="nav-item" data-page="missions"><span class="nav-icon">✳</span> Daily missions <span class="mission-dot"></span></button>
+        <button class="nav-item" type="button" id="chatNavButton"><span class="nav-icon">☏</span> Community chat <span class="chat-nav-pulse"></span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="season-card">
+        <div class="season-top"><span>✦</span><span class="season-tag">SEASON 01</span></div>
+        <strong>Uyo: New Beginnings</strong>
+        <p>Your story starts here. Make every move count.</p>
+        <div class="season-progress"><span></span></div>
+        <small><span id="seasonXp">0</span> / 500 XP to next level</small>
+      </div>
+      <button class="nav-item settings-link" id="settingsBtn"><span class="nav-icon">⚙</span> Settings & save</button>
+      <div class="sidebar-footer"><span class="online-dot"></span> Prototype world <span class="version">v0.1</span></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><span>YOUR WORLD</span><span class="crumb-slash">/</span><strong id="pageCrumb">OVERVIEW</strong></div>
+        <div class="top-actions">
+          <div class="weather-pill"><span>☀</span><span>Uyo <b>29°</b></span></div>
+          <button class="icon-button" id="notificationsBtn" aria-label="Notifications">♧<i></i></button>
+          <button class="profile-chip" id="profileBtn"><span class="mini-avatar" id="miniAvatar">👨🏾</span><span class="profile-name" id="topName">New Resident</span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT CHAPTER STARTS NOW</div>
+            <h1 id="welcomeTitle">Good afternoon, <span>Resident.</span></h1>
+            <p class="subheading">The city is full of possibilities. What will you do today?</p>
+          </div>
+          <button class="primary-button" id="quickExplore"><span>⌖</span> Explore Akwa Ibom <b>↗</b></button>
+        </section>
+
+        <section class="hero-card">
+          <div class="hero-copy">
+            <div class="hero-badge"><span class="spark">✦</span> YOUR STORY, YOUR RULES</div>
+            <h2>Big dreams.<br><em>Local roots.</em></h2>
+            <p>From your first hustle to your dream home, build a life that feels like yours in the heart of Akwa Ibom.</p>
+            <button class="hero-button" id="startMission">Make your next move <span>→</span></button>
+            <div class="hero-footnote"><span class="pulse"></span> YOUR JOURNEY IS IN YOUR HANDS</div>
+          </div>
+          <div class="city-art" aria-label="Stylized illustration of a city in Akwa Ibom">
+            <div class="sun-glow"></div><div class="sun"></div>
+            <div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+            <div class="far-hills"></div><div class="road"></div>
+            <div class="building building-a"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="building building-b"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="building building-c"><i></i><i></i><i></i><i></i></div>
+            <div class="house"><span></span><i></i></div>
+            <div class="palm palm-a"><b></b><i></i></div><div class="palm palm-b"><b></b><i></i></div>
+            <div class="taxi"><span>LA</span></div>
+            <div class="art-label"><span class="art-pin">⌖</span><span><b>UYO, AKWA IBOM</b><small>YOUR NEW HOME</small></span></div>
+            <div class="art-star star-one">✦</div><div class="art-star star-two">✧</div>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Character statistics">
+          <article class="stat-card money-stat"><div class="stat-top"><span>WALLET BALANCE</span><span class="stat-icon">₦</span></div><div class="stat-value" id="walletValue">₦25,000</div><div class="stat-bottom"><span class="positive">↗ Ready to grow</span><span>Virtual cash</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>ENERGY</span><span class="stat-icon energy-icon">ϟ</span></div><div class="stat-value"><span id="energyValue">80</span><small>/ 100</small></div><div class="stat-meter"><span id="energyMeter" style="width:80%"></span></div><div class="stat-bottom"><span>Keep your balance</span><button class="text-action" id="restBtn">Rest +15</button></div></article>
+          <article class="stat-card"><div class="stat-top"><span>HAPPINESS</span><span class="stat-icon happy-icon">☺</span></div><div class="stat-value"><span id="happyValue">72</span><small>/ 100</small></div><div class="stat-meter happy-meter"><span id="happyMeter" style="width:72%"></span></div><div class="stat-bottom"><span id="moodLabel">Doing alright</span><button class="text-action" id="funBtn">Have fun</button></div></article>
+          <article class="stat-card"><div class="stat-top"><span>REPUTATION</span><span class="stat-icon rep-icon">✧</span></div><div class="stat-value"><span id="repValue">10</span><small> pts</small></div><div class="stat-bottom"><span>Level <b id="levelValue">1</b> resident</span><span class="rep-chip">STARTER</span></div></article>
+        </section>
+
+        <section class="content-grid">
+          <div class="left-column">
+            <div class="section-heading"><div><div class="eyebrow small-eyebrow">MAKE IT HAPPEN</div><h3>Your next move</h3></div><span class="section-note">Choose your path</span></div>
+            <div class="action-grid">
+              <button class="action-card" data-go="jobs"><span class="action-illustration job-ill">▣<i>↗</i></span><span class="action-title">Find a job</span><span class="action-desc">Earn cash and build skills.</span><span class="action-arrow">↗</span></button>
+              <button class="action-card" data-go="city"><span class="action-illustration city-ill">⌖<i>✦</i></span><span class="action-title">Explore the city</span><span class="action-desc">Discover new places.</span><span class="action-arrow">↗</span></button>
+              <button class="action-card" data-go="business"><span class="action-illustration biz-ill">▤<i>₦</i></span><span class="action-title">Start a hustle</span><span class="action-desc">Turn an idea into income.</span><span class="action-arrow">↗</span></button>
+              <button class="action-card" data-go="homebase"><span class="action-illustration home-ill">⌂<i>♥</i></span><span class="action-title">Find your place</span><span class="action-desc">Make somewhere your own.</span><span class="action-arrow">↗</span></button>
+            </div>
+            <div class="section-heading missions-heading"><div><div class="eyebrow small-eyebrow">SMALL STEPS, BIG WINS</div><h3>Today's missions</h3></div><button class="text-action" data-go="missions">View all ↗</button></div>
+            <div class="mission-list" id="homeMissionList"></div>
+          </div>
+          <aside class="right-column">
+            <div class="section-heading"><div><div class="eyebrow small-eyebrow">THE NEIGHBOURHOOD</div><h3>Places to know</h3></div><button class="text-action" data-go="city">Full map ↗</button></div>
+            <div class="place-list">
+              <button class="place-card place-uyo" data-place="uyo"><span class="place-art"><span>🏙️</span></span><span class="place-info"><b>Uyo Central</b><small>City life · Shops · Jobs</small><span class="place-status open-status">● Open to explore</span></span><span class="place-arrow">↗</span></button>
+              <button class="place-card place-market" data-place="market"><span class="place-art"><span>🛍️</span></span><span class="place-info"><b>Itam Market</b><small>Trading · Food · Culture</small><span class="place-status">✦ Local favourite</span></span><span class="place-arrow">↗</span></button>
+              <button class="place-card place-coast" data-place="coast"><span class="place-art"><span>🌴</span></span><span class="place-info"><b>Oron Waterfront</b><small>Coast · Fishing · Trade</small><span class="place-status">✦ New horizons</span></span><span class="place-arrow">↗</span></button>
+            </div>
+            <div class="tip-card"><div class="tip-icon">✦</div><div><span class="tip-label">LIFE TIP #<span id="tipNumber">01</span></span><p id="lifeTip">Every big story starts with one small decision. Take a job today and invest in your future.</p><button id="newTip">Another tip ↗</button></div></div>
+          </aside>
+        </section>
+        <footer class="page-footer"><span>© 2026 Life in Akwa Ibom · A virtual-life prototype</span><span>Built for stories, not real-money transactions <b>✦</b></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Global community chat: stays available while players navigate the game. -->
+  <section class="chat-widget" id="communityChat" aria-label="Community chat">
+    <button class="chat-launcher" id="chatLauncher" type="button" aria-expanded="false" aria-controls="chatPanel">
+      <span class="chat-launcher-icon">☏</span><span class="chat-launcher-copy"><b>Town Square</b><small id="chatLauncherStatus">Community chat</small></span><span class="chat-unread hidden" id="chatUnread">0</span><span class="chat-launcher-chevron" id="chatChevron">⌃</span>
+    </button>
+    <div class="chat-panel hidden" id="chatPanel" role="region" aria-label="Town Square live chat">
+      <header class="chat-header"><div class="chat-header-avatar">✦</div><div class="chat-header-copy"><b>Town Square</b><span><i class="chat-status-dot" id="chatStatusDot"></i><span id="chatStatusText">Starting chat…</span></span></div><button class="chat-close" id="chatClose" type="button" aria-label="Close chat">×</button></header>
+      <div class="chat-community-note" id="chatModeNote">Connect with residents from around Akwa Ibom.</div>
+      <div class="chat-name-row"><label for="chatDisplayName">Your chat name</label><input id="chatDisplayName" maxlength="22" placeholder="Choose a display name" autocomplete="nickname"><button id="chatNameSave" type="button">Save</button></div>
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-relevant="additions text"><div class="chat-welcome"><span>👋</span><b>Welcome to Town Square</b><p>Say hello, share your progress, and meet other players.</p></div></div>
+      <div class="chat-safety">Be kind. Never share passwords, private addresses, or financial details. Messages may be visible to all players.</div>
+      <form class="chat-compose" id="chatForm"><label class="sr-only" for="chatMessageInput">Write a message</label><textarea id="chatMessageInput" maxlength="500" rows="1" placeholder="Message the community…" required></textarea><button id="chatSendButton" type="submit" aria-label="Send message">➤</button></form>
+      <div class="chat-footer"><span id="chatCharCount">0/500</span><span id="chatTransportNote">Chat status: checking</span></div>
+    </div>
+  </section>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <div class="modal-kicker" id="modalKicker">YOUR NEXT CHAPTER</div>
+      <h2 id="modalTitle">Create your character</h2>
+      <p class="modal-description" id="modalDescription">Every great story starts with a name. Make yours count.</p>
+      <div id="modalBody"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </section>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="chat-config.js"></script>
+  <script type="module" src="chat.js"></script>
+</body>
+</html>
